@@ -42,7 +42,7 @@ namespace bugbox.Services
       var bugNote = GetBugNotebyId(noteData.Id);
       if (bugNote.ClosedTicket == true)
       {
-        throw new Exception("You can't add notes to resolved tickets");
+        throw new Exception("You can't edit notes to resolved tickets");
       }
       bugNote.Body = noteData.Body;
       bugNote.Timestamp = DateTime.Now;
