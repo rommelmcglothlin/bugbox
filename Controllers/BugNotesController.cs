@@ -15,10 +15,10 @@ namespace BugBox.Controllers
   {
     private readonly BugNotesServices _bn;
 
-    // GET api/values
+    // GET api/bugs
 
 
-    // GET api/values/5
+    // GET api/bugs/#
     [HttpGet("{id}")]
     public ActionResult<BugNote> Get(string id)
     {
@@ -33,7 +33,7 @@ namespace BugBox.Controllers
       }
     }
 
-    // POST api/values
+    // POST api/bugs
     [HttpPost]
     public ActionResult Post([FromBody]BugNote noteData)
     {
@@ -48,7 +48,7 @@ namespace BugBox.Controllers
       }
     }
 
-    // PUT api/values/5
+    // PUT api/bugs/5
     [HttpPut("{id}")]
     public ActionResult Put(string id, [FromBody]BugNote noteData)
     {

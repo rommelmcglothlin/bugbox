@@ -9,7 +9,7 @@ namespace bugbox.Interfaces
     string Description { get; set; }
     bool ClosedTicket { get; set; }
     DateTime ReportedDate { get; set; }
-    DateTime? LastModified { get; set; }
+    DateTime LastModified { get; set; }
     DateTime? ClosedDate { get; set; }
   }
 }

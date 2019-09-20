@@ -7,7 +7,7 @@ using bugbox.Services;
 using Microsoft.AspNetCore.Mvc;
 using bugbox.Data;
 
-namespace BugBox.Controllers //NOTE not showing 
+namespace BugBox.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
@@ -66,7 +66,7 @@ namespace BugBox.Controllers //NOTE not showing
       }
     }
 
-    // PUT api/bugs/5
+    // PUT api/bugs/#
     [HttpPut("{id}")]
     public ActionResult Put(string id, [FromBody] Bug bugData)
     {
@@ -81,7 +81,7 @@ namespace BugBox.Controllers //NOTE not showing
         return BadRequest(e.Message);
       }
     }
-    // DELETE api/bugs/5
+    // DELETE api/bugs/#
     [HttpDelete("{id}")]
     public ActionResult<Bug> CompleteTicket(string id)
     {
